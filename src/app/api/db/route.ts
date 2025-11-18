@@ -1,13 +1,10 @@
-import { getCloudflareContext } from "@opennextjs/cloudflare";
-
-export interface Env {
-  BD: D1Database;
-}
+import { getPrisma } from "@/lib/db";
 
 export async function GET() {
-  const env = getCloudflareContext().env as Env;
+  const prisma = getPrisma();
+  const users = await prisma.user.findMany();
+  const value = { users };
 
-  const value = await env.BD.prepare("SELECT * FROM users;").all();
   return new Response(JSON.stringify(value), {
     status: 200,
     headers: { "Content-Type": "application/json" },
