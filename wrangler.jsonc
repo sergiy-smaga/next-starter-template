@@ -24,8 +24,7 @@
       "binding": "BD",
       "database_name": "serhii-test-db",
       "database_id": "08808575-5c36-4b22-a334-ed02df24bc12",
-      "remote": true,
-      "migrations_dir": "migrations"
+      "remote": true
     }
   ],
   "observability": {

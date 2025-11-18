@@ -1,8 +1,8 @@
-import { getPrisma } from "@/lib/db";
+import { getDb } from "../../../lib/drizzle";
 
 export async function GET() {
-  const prisma = getPrisma();
-  const users = await prisma.user.findMany();
+  const db = getDb();
+  const users = await db.query.usersTable.findMany();
   const value = { users };
 
   return new Response(JSON.stringify(value), {
