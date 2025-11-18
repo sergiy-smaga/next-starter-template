@@ -14,7 +14,8 @@
   "kv_namespaces": [
     {
       "binding": "KV",
-      "id": "2ae584d40d0e4cefa642ec78b9e127e7"
+      "id": "2ae584d40d0e4cefa642ec78b9e127e7",
+      "remote": true
     }
   ],
 
@@ -22,7 +23,8 @@
     {
       "binding": "BD",
       "database_name": "serhii-test-db",
-      "database_id": "08808575-5c36-4b22-a334-ed02df24bc12"
+      "database_id": "08808575-5c36-4b22-a334-ed02df24bc12",
+      "remote": true
     }
   ],
   "observability": {
